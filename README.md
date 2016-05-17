@@ -1,11 +1,17 @@
 # Citações #
 
-Desenvolvimento do aplicativo Citações.
-Aplicativo para visualização de frases, tais como: provérbio, ditado popular, sabedoria e etc...
+## O que é? ##
+
+O aplicativo Citações é um software para a visualização de frases, tais como: provérbio, ditado popular, sabedoria e etc...
 
 ## Requisitos ##
 
-<Descrever os objetivos de alto nível do aplicativo>
+*Descrever os objetivos de alto nível do aplicativo.*
+
+O software Citações é um aplicativo para visualização de frases, essas armazenadas em um repositório de dados (módulo PERSISTENCE).
+
+Módulos principais: Persistência, Base e Interface Gráfica.
+
 - Base da antiga versão em MMB.
 - Utilizar as seguintes tecnologias Java, Linux e SQL.
 - A camada BASE funciona em linha de comando.
