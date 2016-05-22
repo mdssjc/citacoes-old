@@ -20,3 +20,5 @@ Módulos principais: Persistência, Base e Interface Gráfica.
 - A camada VIEW, inicialmente, possui uma interface gráfica através do JavaFX.
 
 ## Modelagem ##
+
+- Diagramas de cenário: contexto e caso de uso. 
