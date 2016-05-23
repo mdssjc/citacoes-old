@@ -8,7 +8,7 @@ O aplicativo Citações é um software para a visualização de frases, tais com
 
 *Descrever os objetivos de alto nível do aplicativo.*
 
-O software Citações é um aplicativo para visualização de frases, essas armazenadas em um repositório de dados (módulo PERSISTENCE). Cada frase é exibida aleatoriamente na tela, conforme pressionado a opção de próxima citação, composta pelo autor, citação e sua categoria.
+O software Citações é um aplicativo para visualização de frases, essas armazenadas em um repositório central de dados (módulo PERSISTENCE). Cada frase é exibida aleatoriamente na tela, conforme pressionado a opção de próxima citação, composta pelo autor, citação e sua categoria. As frases podem ser visualizadas de diversas forma de mídia, tais como: web, mobile e desktop.
 
 Módulos principais: Persistência, Base e Interface Gráfica.
 
@@ -21,4 +21,4 @@ Módulos principais: Persistência, Base e Interface Gráfica.
 
 ## Modelagem ##
 
-- Diagramas de cenário: contexto e caso de uso. 
+- Diagramas de cenário: contexto e caso de uso.
