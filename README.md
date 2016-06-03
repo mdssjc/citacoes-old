@@ -6,9 +6,9 @@ O aplicativo Citações é um software para a visualização de frases, tais com
 
 ## Requisitos ##
 
-*Descrever os objetivos de alto nível do aplicativo.*
-
-O software Citações é um aplicativo para visualização de frases em qualquer plataforma, essas armazenadas em um repositório central de dados com a possibilidade de sincronização, quando executando em offline. Cada frase é exibida aleatoriamente na tela, conforme pressionado a opção de próxima citação, composta pelo autor, citação e sua categoria. As frases podem ser visualizadas de diversas forma de mídia, tais como: web, mobile e desktop.
+O software Citações é um aplicativo para visualização de frases em qualquer plataforma, tais como: Desktop, Web e Mobile - preferência no uso do Linux e Java.
+Essas armazenadas em um repositório local de dados com a possibilidade de sincronização, quando executando em offline, com o repositório central - servidor da aplicação.
+Cada frase é exibida aleatoriamente na tela, conforme pressionado a opção de próxima citação, composta pelo: autor, citação e sua categoria.
 
 A primeira versão será em desktop, com o desenvolvimento da aplicação em linha de comando.
 
