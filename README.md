@@ -16,6 +16,11 @@ A parte principal do aplicativo é sua Base, na qual são encontradas as funcion
 
 ## Modelagem ##
 
-- Diagramas de cenário: contexto e caso de uso.
- - Contexto.
- - Caso de Uso.
+### Contexto ###
+
+Na primeira versão (desktop) não possui a complexidade para a visão de múltiplos sistemas.
+Não há necessidade da modelagem do contexto.
+
+### Interação ###
+
+#### Caso de Uso ####
