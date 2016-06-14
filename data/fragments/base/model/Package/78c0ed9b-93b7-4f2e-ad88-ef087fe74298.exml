@@ -1,0 +1,32 @@
+<?xml version="1.0" ?>
+<!--GENERATED FILE, PLEASE DO NOT EDIT!!!--><EXT object="base" version="4">
+  <OBJECT>
+    <ID name="base" mc="Standard.Package" uid="78c0ed9b-93b7-4f2e-ad88-ef087fe74298"/>
+    <PID name="base" mc="Standard.Project" uid="4dc8b8bf-33e0-4eb5-b2db-fee87bd111b6"/>
+    <ATTRIBUTES>
+      <ATT name="IsInstantiable">false</ATT>
+      <ATT name="IsAbstract">false</ATT>
+      <ATT name="IsLeaf">false</ATT>
+      <ATT name="IsRoot">false</ATT>
+      <ATT name="Visibility">Public</ATT>
+      <ATT name="Name"><![CDATA[base]]></ATT>
+      <ATT name="status">1970354901745664</ATT>
+    </ATTRIBUTES>
+    <DEPENDENCIES>
+      <COMP relation="OwnedElement">
+        <COMPID name="Cliente" mc="Standard.Actor" uid="692cdced-f452-48a7-808d-be3832479161"/>
+        <COMPID name="Obtém Citação" mc="Standard.UseCase" uid="6910b3be-9892-489e-b91b-4e9ac4a16bd5"/>
+        <COMPID name="Gera Log" mc="Standard.UseCase" uid="ad6448eb-d7f7-49b0-b860-51ea712ce0da"/>
+        <COMPID name="Repositório" mc="Standard.Actor" uid="f1578867-a6f1-4e60-9951-0caa4a0054e4"/>
+        <COMPID name="Atualiza Citações" mc="Standard.UseCase" uid="98c9311d-5e14-4b5f-a844-ce1d41003828"/>
+        <COMPID name="Verifica Atualização" mc="Standard.UseCase" uid="b15e9a8d-2bc7-478b-b5eb-711e32b21ddb"/>
+        <COMPID name="Configura Visualização" mc="Standard.UseCase" uid="ffe7c424-6629-4fc7-b1cf-dbdf8169159b"/>
+        <COMPID name="Gera Estatísticas" mc="Standard.UseCase" uid="40eead85-542b-47ae-ae3d-47591bef5d7b"/>
+      </COMP>
+      <COMP relation="Product">
+        <COMPID name="overview diagram" mc="Standard.ClassDiagram" uid="2c9089f3-f122-42d9-9ef5-4f49d31e45dc"/>
+        <COMPID name="Use Case diagram" mc="Standard.UseCaseDiagram" uid="6520309a-643f-4a76-adba-c454a49bc4d0"/>
+      </COMP>
+    </DEPENDENCIES>
+  </OBJECT>
+</EXT>
