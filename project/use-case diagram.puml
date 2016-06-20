@@ -1,0 +1,27 @@
+@startuml
+
+title Cenário da Aplicação Citações
+left to right direction
+
+' Atores
+'
+actor :Usuário:     as u1
+actor :Repositório: as u2
+
+' Casos de Uso
+'
+rectangle Citações {
+  usecase (Próxima citação)              as uc1
+  usecase (Visualiza citação)            as uc2
+  usecase (Sincroniza o repositório)     as uc3
+  usecase (Notifica sobre atualizações)  as uc4
+}
+
+' Interação
+'
+u1 --> uc1
+u1 --> uc2
+u1 --> uc3
+u2 --> uc4
+
+@enduml
