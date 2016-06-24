@@ -1,4 +1,4 @@
-package com.github.mdssjc.base.poc;
+package com.github.mdssjc.citacoes.poc;
 
 import java.io.File;
 
