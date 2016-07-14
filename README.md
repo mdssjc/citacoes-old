@@ -7,6 +7,12 @@ O *software* Citações é um aplicativo para visualização de mensagens no dia
     git clone https://github.com/mdssjc/citacoes.git
     cd citacoes
 
+## Estrutura de Diretórios ##
+
+design:
+
+base:
+
 ## Licença ##
 
 CC0 1.0 Universal
