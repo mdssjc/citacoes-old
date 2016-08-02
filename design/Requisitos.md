@@ -13,3 +13,21 @@ A parte principal do aplicativo é sua **base** em que coordena as atividades da
 - **Desktop**: a **base** recupera a mensagem do repositório local e encaminha para o **view**. A **base** é um módulo em linha de comando e a **view** é uma interface gráfica - preferência no uso do *JavaFX*. Existe a possibilidade de sincronização das frases com um repositório remoto, via *Internet*. Toda comunicação deve optar por um protocolo em texto, como *XML* ou *JSON*.
 - **Mobile**: ASD (A Ser Definido); e
 - **Web**: ASD (A Ser Definido).
+
+## Questões ##
+
+Gerenciamento de ideias como o **5WH2**:
+
+What (O quê?): um aplicativo de visualização de mensagens;
+
+Why (Porquê?): para disponibilizar mensagens com valor intelectual;
+
+Who (Quem?): a todos os interessados;
+
+When (Quando?): com o ciclo de vida do estudo;
+
+Where (Onde?): nas variadas plataformas, como: Desktop, Mobile e Web;
+
+How (Como?): por software em Java e Linux; e
+
+How Much (Quanto custa?): por ser acadêmico, logo é irrelevante.
