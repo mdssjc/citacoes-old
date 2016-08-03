@@ -16,18 +16,18 @@ A parte principal do aplicativo é sua **base** em que coordena as atividades da
 
 ## Questões ##
 
-Gerenciamento de ideias como o **5WH2**:
+Questões sobre o projeto, aplicadas com o **5WH2**:
 
-What (O quê?): um aplicativo de visualização de mensagens;
+*What* (O quê?): desenvolver um sistema multiplataforma para visualização de mensagens;
 
-Why (Porquê?): para disponibilizar mensagens com valor intelectual;
+*Why* (Porquê?): para aplicar conhecimentos sobre arquitetura de *software* e testes, além de disponibilizar mensagens com valor intelectual;
 
-Who (Quem?): a todos os interessados;
+*Who* (Quem?): aos interessados em desenvolvimento de *software* e em aplicativos de mensagens;
 
-When (Quando?): com o ciclo de vida do estudo;
+*When* (Quando?): com o ciclo de vida dos estudos;
 
-Where (Onde?): nas variadas plataformas, como: Desktop, Mobile e Web;
+*Where* (Onde?): no escritório com a exposição dos materiais através de mídias sociais: *Github* e *Twitter*;
 
-How (Como?): por software em Java e Linux; e
+*How* (Como?): através dos estudos e incrementos do portfólio; e
 
-How Much (Quanto custa?): por ser acadêmico, logo é irrelevante.
+*How Much* (Quanto custa?): por ser um projeto acadêmico, logo é irrelevante o fator material.
