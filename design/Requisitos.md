@@ -16,8 +16,6 @@ A parte principal do aplicativo é sua **base** em que coordena as atividades da
 
 ## Questões ##
 
-Questões sobre o projeto, aplicadas com o **5WH2**:
-
 *What* (O quê?): desenvolver um sistema multiplataforma para visualização de mensagens;
 
 *Why* (Porquê?): para aplicar conhecimentos sobre arquitetura de *software* e testes, além de disponibilizar mensagens com valor intelectual;
