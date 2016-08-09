@@ -5,7 +5,7 @@ import lombok.Data;
 /**
  * Entidade Mensagem.
  * <p/>
- * Representa os elementos da mensagem, como: id, autor, categoria e a texto
+ * Representa os elementos da mensagem: id, autor, categoria e a texto
  * 
  * @author Marcelo dos Santos
  *
