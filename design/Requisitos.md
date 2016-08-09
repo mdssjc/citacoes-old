@@ -16,7 +16,7 @@ A parte principal do aplicativo é sua **base** em que coordena as atividades da
 
 ## Questões ##
 
-*What* (O quê?): desenvolver um sistema multiplataforma para visualização de mensagens;
+*What* (O quê?): desenvolver um sistema multiplataforma para visualização de mensagens em paralelo com os estudos;
 
 *Why* (Porquê?): para aplicar conhecimentos sobre arquitetura de *software* e testes, além de disponibilizar mensagens com valor intelectual;
 
