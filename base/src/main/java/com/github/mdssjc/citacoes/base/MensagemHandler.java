@@ -1,12 +1,12 @@
 package com.github.mdssjc.citacoes.base;
 
 /**
- * Classe gerenciadora de mensagens.
+ * Classe coordenadora de mensagens.
  * 
  * @author Marcelo dos Santos
  *
  */
-public class Manager {
+public class MensagemHandler {
 
   public void updateData() {
   }
