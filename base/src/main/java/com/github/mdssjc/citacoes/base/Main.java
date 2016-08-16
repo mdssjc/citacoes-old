@@ -1,7 +1,7 @@
 package com.github.mdssjc.citacoes.base;
 
 /**
- * Classe principal.
+ * Classe de entrada da aplicação.
  * 
  * @author Marcelo dos Santos
  *
