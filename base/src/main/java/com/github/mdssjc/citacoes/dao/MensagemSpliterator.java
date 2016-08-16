@@ -3,7 +3,7 @@ package com.github.mdssjc.citacoes.dao;
 import java.util.Spliterator;
 import java.util.function.Consumer;
 
-import com.github.mdssjc.citacoes.entities.Mensagem;
+import com.github.mdssjc.citacoes.model.Mensagem;
 
 /**
  * Mensagem Spliterator.
