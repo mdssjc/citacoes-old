@@ -3,10 +3,12 @@ package com.github.mdssjc.citacoes.dao;
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Paths;
+import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
-import com.github.mdssjc.citacoes.entities.Mensagem;
+import com.github.mdssjc.citacoes.model.Mensagem;
 
 /**
  * Implementação DAO da entidade Mensagem.
@@ -44,9 +46,8 @@ public class MensagemDao implements Dao<Mensagem> {
   }
 
   @Override
-  public Mensagem[] findAll() {
-    return this.repositorio.values()
-      .toArray(new Mensagem[0]);
+  public List<Mensagem> findAll() {
+    return new ArrayList<>(this.repositorio.values());
   }
 
   public int total() {
