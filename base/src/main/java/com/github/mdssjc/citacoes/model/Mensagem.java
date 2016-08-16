@@ -1,4 +1,4 @@
-package com.github.mdssjc.citacoes.entities;
+package com.github.mdssjc.citacoes.model;
 
 import lombok.Data;
 
