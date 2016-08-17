@@ -19,3 +19,9 @@ Para Que seja possível ver uma mensagem aleatoriamente no terminal com os dados
   * Simular um conjunto de mensagens {A, B, C}
   * Invocar o ponto de entrada da aplicação
   * Verificar as mensagens com o conjunto em modo aleatório
+
+## Leitura do JSON ##
+
+## Inclusão de Mensagens ##
+
+## Sincronização do Repositório ##
