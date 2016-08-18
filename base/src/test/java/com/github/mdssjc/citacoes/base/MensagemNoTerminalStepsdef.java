@@ -3,13 +3,14 @@ package com.github.mdssjc.citacoes.base;
 import static org.junit.Assert.fail;
 
 import java.io.File;
+import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.PrintStream;
+import java.util.ArrayList;
 import java.util.List;
 
 import com.github.mdssjc.citacoes.model.Mensagem;
 
-import cucumber.api.DataTable;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
@@ -22,8 +23,12 @@ import cucumber.api.java.en.When;
  */
 public class MensagemNoTerminalStepsdef {
 
+  private List<Mensagem> saidas;
+
   @Given("^o repositório inicia\\.$")
   public void o_repositório_inicia(final List<Mensagem> mensagens) {
+    this.saidas = new ArrayList<>();
+
     try (PrintStream ps = new PrintStream(new File("repositorio"))) {
       for (final Mensagem mensagem : mensagens) {
         ps.println(mensagem.getId());
@@ -40,12 +45,28 @@ public class MensagemNoTerminalStepsdef {
   }
 
   @When("^o usuário executa a aplicação por (\\d+) vez\\(es\\)\\.$")
-  public void o_usuário_executa_a_aplicação_por_vez_es(final int arg1) {
+  public void o_usuário_executa_a_aplicação_por_vez_es(final int vezes) {
     fail("Não implementado");
+    try {
+      for (int i = 0; i < vezes; i++) {
+        System.setOut(new PrintStream(new File("log")));
+        Main.main(new String[] { "" });
+
+        // leitura dos resultados
+        // saidas.add(new Mensagem());
+      }
+    } catch (final FileNotFoundException e) {
+      e.printStackTrace();
+    }
   }
 
   @Then("^a mensagem é exibida\\.$")
-  public void a_mensagem_é_exibida(final DataTable arg1) {
+  public void a_mensagem_é_exibida(final List<Mensagem> referencias) {
     fail("Não implementado");
+    for (final Mensagem mensagem : this.saidas) {
+      if (!referencias.contains(mensagem)) {
+        fail("Faltam mensagens na execução do aplicativo");
+      }
+    }
   }
 }
