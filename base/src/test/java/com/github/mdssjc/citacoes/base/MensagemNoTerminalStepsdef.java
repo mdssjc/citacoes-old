@@ -3,9 +3,10 @@ package com.github.mdssjc.citacoes.base;
 import static org.junit.Assert.fail;
 
 import java.io.File;
-import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.PrintStream;
+import java.nio.file.Files;
+import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -23,7 +24,7 @@ import cucumber.api.java.en.When;
  */
 public class MensagemNoTerminalStepsdef {
 
-  private List<Mensagem> saidas;
+  private List<String> saidas;
 
   @Given("^o repositório inicia\\.$")
   public void o_repositório_inicia(final List<Mensagem> mensagens) {
@@ -51,22 +52,30 @@ public class MensagemNoTerminalStepsdef {
       for (int i = 0; i < vezes; i++) {
         System.setOut(new PrintStream(new File("log")));
         Main.main(new String[] { "" });
-
-        // leitura dos resultados
-        // saidas.add(new Mensagem());
+        this.saidas = Files.readAllLines(Paths.get("log"));
       }
-    } catch (final FileNotFoundException e) {
-      e.printStackTrace();
+    } catch (final IOException exception) {
+      System.err.println("Falha na execução: " + exception.getMessage());
     }
   }
 
   @Then("^a mensagem é exibida\\.$")
   public void a_mensagem_é_exibida(final List<Mensagem> referencias) {
     fail("Não implementado");
-    for (final Mensagem mensagem : this.saidas) {
-      if (!referencias.contains(mensagem)) {
-        fail("Faltam mensagens na execução do aplicativo");
-      }
+
+    final List<Mensagem> mensagens = new ArrayList<>();
+    for (int i = 0; i < this.saidas.size(); i += 4) {
+      final Mensagem mensagem = new Mensagem();
+      mensagem.setId(Long.parseLong(this.saidas.get(i)));
+      mensagem.setCategoria(this.saidas.get(i + 1));
+      mensagem.setAutor(this.saidas.get(i + 2));
+      mensagem.setTexto(this.saidas.get(i + 3));
+      mensagens.add(mensagem);
+    }
+
+    for (final Mensagem mensagem : mensagens) {
+      referencias.contains(mensagem);
+      referencias.remove(mensagem);
     }
   }
 }
