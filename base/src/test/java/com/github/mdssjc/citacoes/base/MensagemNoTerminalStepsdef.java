@@ -47,7 +47,7 @@ public class MensagemNoTerminalStepsdef {
     try {
       for (int i = 0; i < vezes; i++) {
         System.setOut(new PrintStream(new File("log")));
-        Main.main(new String[] { "" });
+        Main.main(new String[] {});
         this.saidas = Files.readAllLines(Paths.get("log"));
       }
     } catch (final IOException exception) {
