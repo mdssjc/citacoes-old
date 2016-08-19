@@ -17,7 +17,7 @@ import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 
 /**
- * Etapas do cenário: Mensagem no Terminal.
+ * Especificação: Mensagem no Terminal.
  * 
  * @author Marcelo dos Santos
  *
@@ -38,16 +38,12 @@ public class MensagemNoTerminalStepsdef {
         ps.println(mensagem.getTexto());
       }
     } catch (final IOException exception) {
-      System.err
-        .println(
-            "Falha na criação do repositório: " + exception.getMessage());
-      fail();
+      fail("Falha na criação do repositório: " + exception.getMessage());
     }
   }
 
   @When("^o usuário executa a aplicação por (\\d+) vez\\(es\\)\\.$")
   public void o_usuário_executa_a_aplicação_por_vez_es(final int vezes) {
-    fail("Não implementado");
     try {
       for (int i = 0; i < vezes; i++) {
         System.setOut(new PrintStream(new File("log")));
@@ -55,13 +51,19 @@ public class MensagemNoTerminalStepsdef {
         this.saidas = Files.readAllLines(Paths.get("log"));
       }
     } catch (final IOException exception) {
-      System.err.println("Falha na execução: " + exception.getMessage());
+      fail("Falha na execução: " + exception.getMessage());
+    }
+
+    if (this.saidas.size() != vezes * 4) {
+      fail("Faltam mensagens durante a execução.");
     }
   }
 
   @Then("^a mensagem é exibida\\.$")
   public void a_mensagem_é_exibida(final List<Mensagem> referencias) {
-    fail("Não implementado");
+    if (referencias.size() != this.saidas.size() * 4) {
+      fail("Incoerência na quantidade de mensagens.");
+    }
 
     final List<Mensagem> mensagens = new ArrayList<>();
     for (int i = 0; i < this.saidas.size(); i += 4) {
@@ -74,7 +76,9 @@ public class MensagemNoTerminalStepsdef {
     }
 
     for (final Mensagem mensagem : mensagens) {
-      referencias.contains(mensagem);
+      if (!referencias.contains(mensagem)) {
+        fail("Mensagem não encontrada.");
+      }
       referencias.remove(mensagem);
     }
   }
