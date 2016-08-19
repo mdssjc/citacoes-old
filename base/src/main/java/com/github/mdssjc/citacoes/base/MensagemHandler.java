@@ -23,7 +23,7 @@ public class MensagemHandler {
 
   public Mensagem nextMessage() {
     final long rnd = ThreadLocalRandom.current()
-      .nextLong(1, this.MAX);
+      .nextLong(1, this.MAX + 1);
 
     return this.dao.find(rnd);
   }
