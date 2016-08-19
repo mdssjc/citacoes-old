@@ -61,7 +61,7 @@ public class MensagemNoTerminalStepsdef {
 
   @Then("^a mensagem é exibida\\.$")
   public void a_mensagem_é_exibida(final List<Mensagem> referencias) {
-    if (referencias.size() != this.saidas.size() * 4) {
+    if (referencias.size() != this.saidas.size() / 4) {
       fail("Incoerência na quantidade de mensagens.");
     }
 
@@ -75,11 +75,11 @@ public class MensagemNoTerminalStepsdef {
       mensagens.add(mensagem);
     }
 
-    for (final Mensagem mensagem : mensagens) {
-      if (!referencias.contains(mensagem)) {
+    for (final Mensagem mensagem : referencias) {
+      if (!mensagens.contains(mensagem)) {
         fail("Mensagem não encontrada.");
       }
-      referencias.remove(mensagem);
+      mensagens.remove(mensagem);
     }
   }
 }
