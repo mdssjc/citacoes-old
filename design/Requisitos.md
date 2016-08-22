@@ -9,7 +9,6 @@ A citação (mensagem processada) é exibida aleatoriamente na tela, conforme a�
 Além da visualização, tem a possibilidade de integração com serviços de mensagens como o *Twitter* e o *Facebook*.
 
 A parte principal do aplicativo é sua **base** em que coordena as atividades das funcionalidades principais para interação entre visualização e repositório - sua comunicação utiliza protocolos de transmissão de dados como *XML* e/ou *JSON*. Sua execução em linha de comando acessa toda funcionalidade do sistema através de argumentos, quando na versão:
-
 - **Desktop**: ASD (A Ser Definido);
 - **Mobile**: ASD (A Ser Definido); e
 - **Web**: ASD (A Ser Definido).
