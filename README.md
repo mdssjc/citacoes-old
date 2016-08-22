@@ -1,20 +1,19 @@
 # Citações #
 
-O *software* Citações é um aplicativo para visualização de mensagens no dia a dia, tais como: provérbio, ditado popular, sabedoria, frases e etc...
+O aplicativo Citações é um visualizador de mensagens no dia a dia, tais como: provérbio, ditado popular, sabedoria, frases e etc...
 
 ## Requisitos ##
 
-O *software* Citações é um aplicativo para visualização de mensagens do dia a dia, disponível em qualquer plataforma, tais como: *Desktop*, *Mobile* e *Web* - na preferência pelo uso de tecnologias livres como: *Java* e *Linux*.
+O projeto Citações é um *software* para visualização de mensagens do dia a dia, disponível nas principais plataformas, tais como: *Desktop*, *Mobile* e *Web* - na preferência pelo uso de tecnologias livres e acessíveis, como: *Java*, *Lisp*, *C* e *Linux*.
 
-Essas são armazenadas em um repositório local de dados com a possibilidade de sincronização, quando executado em *offline*, com o repositório central - servidor da aplicação.
+As mensagens são distribuídas através da sincronização do repositório central (servidor da aplicação - processo *online* ou instalação) com as armazenadas no repositório local (aplicativo - processo *offline*);
 
-A citação é exibida aleatoriamente na tela, conforme ação do usuário em escolher a opção de próxima mensagem, composta por: autor, mensagem e sua categoria (provérbio, ditado popular, sabedoria, frases e etc...) - um arquivo com a sumarização dos dados estatísticos sobre a visualização das citações é criado.
+A citação (mensagem processada) é exibida aleatoriamente na tela, conforme ação do usuário em escolher a opção de próxima mensagem, composta por: autor, categoria e sua mensagem na variedade de: provérbio, ditado popular, sabedoria, frases e etc... - um arquivo com a sumarização dos dados estatísticos sobre a visualização das citações é criado para melhorias na dinâmica de seleção no repositório.
 
 Além da visualização, tem a possibilidade de integração com serviços de mensagens como o *Twitter* e o *Facebook*.
 
-A parte principal do aplicativo é sua **base** em que coordena as atividades das funcionalidades principais para interação entre visualização e repositório, quando na versão:
-
-- **Desktop**: a **base** recupera a mensagem do repositório local e encaminha para o **view**. A **base** é um módulo em linha de comando e a **view** é uma interface gráfica - preferência no uso do *JavaFX*. Existe a possibilidade de sincronização das frases com um repositório remoto, via *Internet*. Toda comunicação deve optar por um protocolo em texto, como *XML* ou *JSON*.
+A parte principal do aplicativo é sua **base** em que coordena as atividades das funcionalidades principais para interação entre visualização e repositório - sua comunicação utiliza protocolos de transmissão de dados como *XML* e/ou *JSON*. Sua execução em linha de comando acessa toda funcionalidade do sistema através de argumentos, quando na versão:
+- **Desktop**: ASD (A Ser Definido);
 - **Mobile**: ASD (A Ser Definido); e
 - **Web**: ASD (A Ser Definido).
 
