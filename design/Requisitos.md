@@ -1,8 +1,8 @@
 # Requisitos #
 
-O *software* Citações é um aplicativo para visualização de mensagens do dia a dia, disponível em qualquer plataforma, tais como: *Desktop*, *Mobile* e *Web* - na preferência pelo uso de tecnologias livres como: *Java* e *Linux*.
+O projeto Citações é um software para visualização de mensagens do dia a dia, disponível nas principais plataformas, tais como: *Desktop*, *Mobile* e *Web* - na preferência pelo uso de tecnologias livres e acessíveis, como: *Java*, Lisp, C e *Linux*.
 
-Essas são armazenadas em um repositório local de dados com a possibilidade de sincronização, quando executado em *offline*, com o repositório central - servidor da aplicação.
+As mensagens são distribuídas através da sincronização do repositório central (servidor da aplicação - processo online ou instalação) com as armazenadas no repositório local (aplicativo - processo offline);
 
 A citação é exibida aleatoriamente na tela, conforme ação do usuário em escolher a opção de próxima mensagem, composta por: autor, mensagem e sua categoria (provérbio, ditado popular, sabedoria, frases e etc...) - um arquivo com a sumarização dos dados estatísticos sobre a visualização das citações é criado.
 
