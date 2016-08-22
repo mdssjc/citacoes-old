@@ -4,7 +4,7 @@ O projeto Citações é um *software* para visualização de mensagens do dia a 
 
 As mensagens são distribuídas através da sincronização do repositório central (servidor da aplicação - processo *online* ou instalação) com as armazenadas no repositório local (aplicativo - processo *offline*);
 
-A citação é exibida aleatoriamente na tela, conforme ação do usuário em escolher a opção de próxima mensagem, composta por: autor, mensagem e sua categoria (provérbio, ditado popular, sabedoria, frases e etc...) - um arquivo com a sumarização dos dados estatísticos sobre a visualização das citações é criado.
+A citação (mensagem processada) é exibida aleatoriamente na tela, conforme ação do usuário em escolher a opção de próxima mensagem, composta por: autor, categoria e sua mensagem na variedade de: provérbio, ditado popular, sabedoria, frases e etc... - um arquivo com a sumarização dos dados estatísticos sobre a visualização das citações é criado para melhorias na dinâmica de seleção no repositório.
 
 Além da visualização, tem a possibilidade de integração com serviços de mensagens como o *Twitter* e o *Facebook*.
 
