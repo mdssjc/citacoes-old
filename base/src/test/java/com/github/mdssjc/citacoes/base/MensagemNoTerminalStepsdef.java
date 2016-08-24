@@ -44,12 +44,12 @@ public class MensagemNoTerminalStepsdef {
 
   @When("^o usuário executa a aplicação por (\\d+) vez\\(es\\)\\.$")
   public void o_usuário_executa_a_aplicação_por_vez_es(final int vezes) {
-    try {
+    try (PrintStream ps = new PrintStream(new File("log"))) {
+      System.setOut(ps);
       for (int i = 0; i < vezes; i++) {
-        System.setOut(new PrintStream(new File("log")));
         Main.main(new String[] {});
-        this.saidas = Files.readAllLines(Paths.get("log"));
       }
+      this.saidas = Files.readAllLines(Paths.get("log"));
     } catch (final IOException exception) {
       fail("Falha na execução: " + exception.getMessage());
     }
@@ -79,7 +79,6 @@ public class MensagemNoTerminalStepsdef {
       if (!mensagens.contains(mensagem)) {
         fail("Mensagem não encontrada.");
       }
-      mensagens.remove(mensagem);
     }
   }
 }
