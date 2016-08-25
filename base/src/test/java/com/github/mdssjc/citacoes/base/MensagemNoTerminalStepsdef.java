@@ -75,8 +75,8 @@ public class MensagemNoTerminalStepsdef {
       mensagens.add(mensagem);
     }
 
-    for (final Mensagem mensagem : referencias) {
-      if (!mensagens.contains(mensagem)) {
+    for (final Mensagem mensagem : mensagens) {
+      if (!referencias.contains(mensagem)) {
         fail("Mensagem não encontrada.");
       }
     }
