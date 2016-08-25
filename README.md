@@ -2,6 +2,23 @@
 
 O aplicativo Citações é um visualizador de mensagens no dia a dia, tais como: provérbio, ditado popular, sabedoria, frases e etc...
 
+![Tela do Citações](design/tela0.png)
+
+## Projeto ##
+
+O projeto utiliza a tecnologia *Java* 8 com o gerenciamento de *build* pelo *Maven*, execute os seguintes comandos para clonar o repositório:
+
+    git clone https://github.com/mdssjc/citacoes.git
+    cd citacoes
+
+### Estrutura de Diretórios ###
+
+  * base: camada principal do sistema.
+
+### Cenários ###
+
+  * Mensagem no Terminal: visualiza as citações a cada chamada do aplicativo.
+
 ## Requisitos ##
 
 O projeto Citações é um *software* para visualização de mensagens do dia a dia, disponível nas principais plataformas, tais como: *Desktop*, *Mobile* e *Web* - na preferência pelo uso de tecnologias livres e acessíveis, como: *Java*, *Lisp*, *C* e *Linux*.
@@ -16,21 +33,6 @@ A parte principal do aplicativo é sua **base** em que coordena as atividades da
 - **Desktop**: ASD (A Ser Definido);
 - **Mobile**: ASD (A Ser Definido); e
 - **Web**: ASD (A Ser Definido).
-
-## Projeto ##
-
-O projeto utiliza a tecnologia *Java* 8 e o gerenciamento do *build Maven*, execute os seguintes comandos para clonar o repositório:
-
-    git clone https://github.com/mdssjc/citacoes.git
-    cd citacoes
-
-### Estrutura de Diretórios ###
-
-  * base: Gerenciamento do repositório local.
-
-### Cenários ###
-
-  * Mensagem no Terminal: visualiza as citações a cada chamada do aplicativo.
 
 ## Licença ##
 
