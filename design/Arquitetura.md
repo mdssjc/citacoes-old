@@ -22,7 +22,7 @@ Para Que seja possível ver uma mensagem aleatoriamente no terminal com os dados
 
 ## Apresentação da Mensagem ##
 
-## Leitura do JSON ##
+## Leitura do JSON/XML ##
 
 ## Inclusão de Mensagens ##
 
