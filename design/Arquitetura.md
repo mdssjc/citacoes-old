@@ -16,9 +16,9 @@ Para Que seja possível ver uma mensagem aleatoriamente no terminal com os dados
 
 ### Test Criteria ###
 
-  * Simular um conjunto de mensagens {A, B, C}
-  * Invocar o ponto de entrada da aplicação
-  * Verificar as mensagens com o conjunto em modo aleatório
+  * Simular um conjunto de mensagens {A, B, C}.
+  * Invocar o ponto de entrada da aplicação.
+  * Verificar as mensagens com o conjunto em modo aleatório.
 
 ## Apresentação da Mensagem ##
 
