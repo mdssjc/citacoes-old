@@ -3,7 +3,9 @@
 ## Mensagem no Terminal ##
 
 Como um usuário da aplicação
+
 Eu Quero requisitar a uma nova mensagem
+
 Para Que seja possível ver uma mensagem aleatoriamente no terminal com os dados de autor, categoria e texto
 
 ### Tasks ###
@@ -23,7 +25,9 @@ Para Que seja possível ver uma mensagem aleatoriamente no terminal com os dados
 ## Apresentação da Mensagem ##
 
 Como um usuário da aplicação
+
 Eu Quero visualizar a mensagem formatada
+
 Para Que possa a corresponder com o padrão: `Categoria: "Mensagem" por Autor`
 
 ## Leitura do JSON/XML ##
