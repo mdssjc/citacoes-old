@@ -30,6 +30,12 @@ Eu Quero visualizar a mensagem formatada
 
 Para Que possa a corresponder com o padrão: `Categoria: "Mensagem" por Autor`
 
+### Tasks ###
+
+  * Requisitar uma mensagem pelo argumento `pretty`.
+  * Formatar a mensagem, conforme o padrão.
+  * Apresentar a mensagem na tela.
+
 ## Leitura do JSON/XML ##
 
 ## Inclusão de Mensagens ##
