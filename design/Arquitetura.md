@@ -42,7 +42,7 @@ Para Que possa a corresponder com o padrão: `Categoria: "Mensagem" por Autor`
   * Invocar a aplicação com o argumento `pretty`.
   * Comparar a formatação com a mensagem.
 
-## Leitura do JSON/XML ##
+## Leitura do XML/JSON ##
 
 ## Inclusão de Mensagens ##
 
