@@ -36,6 +36,12 @@ Para Que possa a corresponder com o padrão: `Categoria: "Mensagem" por Autor`
   * Formatar a mensagem, conforme o padrão.
   * Apresentar a mensagem na tela.
 
+### Test Criteria ###
+
+  * Simular uma mensagem.
+  * Invocar a aplicação com o argumento `pretty`.
+  * Comparar a formatação com a mensagem.
+
 ## Leitura do JSON/XML ##
 
 ## Inclusão de Mensagens ##
