@@ -1,11 +1,7 @@
-*.class
-
-# Package Files #
-*.jar
-
-# Files #
-/.settings/
-/.classpath
-/.project
 /citacoes.iml
 /.idea/
+/distribution/distribution.iml
+/base/base.iml
+/base/.idea/
+/distribution/target/
+/base/target/
