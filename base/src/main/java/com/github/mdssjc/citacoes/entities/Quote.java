@@ -48,7 +48,7 @@ public class Quote {
 
   @Override
   public String toString() {
-    return String.format("%d.%s: \"%s\" (%s)%n",
+    return String.format("%d.%s: \"%s\" (%s)",
                          getId(), getCategoria(),
                          getTexto(), getAutor());
   }
