@@ -26,11 +26,11 @@ public class Quote {
     return of(message, 0, false);
   }
 
-  public static Quote of(final String message, final int id) {
+  public static Quote of(final String message, final long id) {
     return of(message, id, true);
   }
 
-  private static Quote of(final String message, final int id, final boolean idUsed) {
+  private static Quote of(final String message, final long id, final boolean idUsed) {
     final Pattern pattern = Pattern.compile("([0-9])*\\.?(.*): \"(.*)\" \\((.*)\\)");
     final Matcher matcher = pattern.matcher(message);
     matcher.matches();

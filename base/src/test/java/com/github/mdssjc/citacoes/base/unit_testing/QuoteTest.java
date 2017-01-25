@@ -34,14 +34,16 @@ public class QuoteTest {
 
   @Test
   public void constroiUmaMensagemComId() {
+    long id = 10L;
+
     final Quote quote = new Quote();
-    quote.setId(10);
+    quote.setId(id);
     quote.setCategoria("Categoria");
     quote.setTexto("Mensagem...");
     quote.setAutor("Autor");
     final String message = "Categoria: \"Mensagem...\" (Autor)";
 
-    final Quote result = Quote.of(message, 10);
+    final Quote result = Quote.of(message, id);
 
     Assert.assertEquals(quote, result);
   }
