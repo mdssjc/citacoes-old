@@ -2,22 +2,22 @@ Feature: Mensagem no Terminal
 
 Scenario: Mensagem Simples 
   Given o repositório inicia. 
-    | id | categoria | autor |  texto   |
-    |  1 | categoria | autor | mensagem |
+    | id | categoria | texto       | autor |
+    |  1 | Categoria | Mensagem... | Autor |
   When o usuário executa a aplicação por 1 vez(es). 
   Then a mensagem é exibida. 
-    | id | categoria | autor |  texto   |
-    |  1 | categoria | autor | mensagem |
-    
-Scenario: Mensagens Aleatórias 
-  Given o repositório inicia. 
-    | id | categoria | autor |  texto   |
-    |  1 |     A     | autor | mensagem |
-    |  2 |     B     | autor | mensagem |
-    |  3 |     C     | autor | mensagem |
-  When o usuário executa a aplicação por 3 vez(es). 
-  Then a mensagem é exibida. 
-    | id | categoria | autor |  texto   |
-    |  1 |     A     | autor | mensagem |
-    |  2 |     B     | autor | mensagem |
-    |  3 |     C     | autor | mensagem |
+    """
+    1.Categoria: "Mensagem..." (Autor)
+    """
+
+Scenario: Mensagens Aleatórias
+  Given o repositório inicia.
+    | id | categoria |  texto    | autor  |
+    |  1 |     A     | mensagemA | autorA |
+    |  2 |     B     | mensagemB | autorB |
+    |  3 |     C     | mensagemC | autorC |
+  When o usuário executa a aplicação por 3 vez(es).
+  Then a mensagem é exibida.
+    |1.A: "mensagemA" (autorA)|
+    |2.B: "mensagemB" (autorB)|
+    |3.C: "mensagemC" (autorC)|
