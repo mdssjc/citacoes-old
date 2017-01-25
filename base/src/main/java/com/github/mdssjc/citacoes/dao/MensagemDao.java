@@ -1,52 +1,50 @@
 package com.github.mdssjc.citacoes.dao;
 
-import java.io.IOException;
-import java.nio.file.Files;
-import java.nio.file.Paths;
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import com.github.mdssjc.citacoes.entities.Quote;
+import com.github.mdssjc.citacoes.utils.Config;
 
-import com.github.mdssjc.citacoes.model.Mensagem;
+import java.io.FileInputStream;
+import java.util.*;
 
 /**
  * Implementação DAO da entidade Mensagem.
- * 
+ *
  * @author Marcelo dos Santos
  *
  */
-public class MensagemDao implements Dao<Mensagem> {
+public class MensagemDao implements Dao<Quote> {
 
-  private final Map<Long, Mensagem> repositorio;
+  private final Map<Long, Quote> repositorio;
 
-  public MensagemDao() {
+  public MensagemDao() throws DaoException {
+    String rep = Config.INSTANCE.getProperty("repository.path");
     this.repositorio = new HashMap<>();
-    try {
-      new MensagemSpliterator(
-          Files.readAllLines(Paths.get("repositorio"))
-            .toArray(new String[0]),
-          0, 4).forEachRemaining(m -> this.repositorio.put(m.getId(), m));
-    } catch (final IOException e) {
-      e.printStackTrace();
+
+    try (final Scanner scanner = new Scanner(new FileInputStream(rep))) {
+      for (long i = 0; scanner.hasNext(); i++) {
+        String message = scanner.nextLine();
+        this.repositorio.put(i, Quote.of(message, i));
+      }
+    } catch (final Exception e) {
+      throw new DaoException("Falha ao inicializar o repositório.", e);
     }
   }
 
   @Override
-  public void save(final Mensagem type) throws DaoException {
+  public void save(final Quote type) throws DaoException {
   }
 
   @Override
-  public void remove(final Mensagem type) throws DaoException {
+  public void remove(final Quote type) throws DaoException {
   }
 
   @Override
-  public Mensagem find(final long id) {
+  public Quote find(final long id) {
     return this.repositorio.get(id);
   }
 
   @Override
-  public List<Mensagem> findAll() {
+  public List<Quote> findAll() {
     return new ArrayList<>(this.repositorio.values());
   }
 
