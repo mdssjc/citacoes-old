@@ -16,7 +16,7 @@ public class QuoteTest {
 
   @Before
   public void setup() {
-    Config.testMode();
+    Config.INSTANCE.testMode();
   }
 
   @Test
