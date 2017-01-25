@@ -1,14 +1,13 @@
 package com.github.mdssjc.citacoes.base;
 
-import static org.junit.Assert.fail;
-
-import java.util.List;
-
-import com.github.mdssjc.citacoes.model.Mensagem;
-
+import com.github.mdssjc.citacoes.entities.Quote;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
+
+import java.util.List;
+
+import static org.junit.Assert.fail;
 
 /**
  * Especificação: Apresentação da Mensagem.
@@ -19,7 +18,7 @@ import cucumber.api.java.en.When;
 public class ApresentacaoDaMensagemStepsdef {
 
   @Given("^o repositório com a mensagem:$")
-  public void o_repositório_com_a_mensagem(List<Mensagem> mensagens) {
+  public void o_repositório_com_a_mensagem(List<Quote> mensagens) {
     fail();
   }
 

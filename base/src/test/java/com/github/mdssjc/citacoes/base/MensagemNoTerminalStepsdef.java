@@ -1,6 +1,10 @@
 package com.github.mdssjc.citacoes.base;
 
-import static org.junit.Assert.fail;
+import com.github.mdssjc.citacoes.entities.Quote;
+import com.github.mdssjc.citacoes.utils.Config;
+import cucumber.api.java.en.Given;
+import cucumber.api.java.en.Then;
+import cucumber.api.java.en.When;
 
 import java.io.File;
 import java.io.IOException;
@@ -9,16 +13,13 @@ import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.stream.Collectors;
 
-import com.github.mdssjc.citacoes.model.Mensagem;
-
-import cucumber.api.java.en.Given;
-import cucumber.api.java.en.Then;
-import cucumber.api.java.en.When;
+import static org.junit.Assert.fail;
 
 /**
  * Especificação: Mensagem no Terminal.
- * 
+ *
  * @author Marcelo dos Santos
  *
  */
@@ -27,18 +28,20 @@ public class MensagemNoTerminalStepsdef {
   private List<String> saidas;
 
   @Given("^o repositório inicia\\.$")
-  public void o_repositório_inicia(final List<Mensagem> mensagens) {
+  public void o_repositório_inicia(final List<Quote> mensagens) {
+    Config.INSTANCE.testMode();
     this.saidas = new ArrayList<>();
 
     try (PrintStream ps = new PrintStream(new File("repositorio"))) {
-      for (final Mensagem mensagem : mensagens) {
-        ps.println(mensagem.getId());
-        ps.println(mensagem.getCategoria());
-        ps.println(mensagem.getAutor());
-        ps.println(mensagem.getTexto());
+      for (final Quote mensagem : mensagens) {
+        ps.printf("%d.%s: \"%s\" (%s)%n",
+                  mensagem.getId(),
+                  mensagem.getCategoria(),
+                  mensagem.getTexto(),
+                  mensagem.getAutor());
       }
     } catch (final IOException exception) {
-      fail("Falha na criação do repositório: " + exception.getMessage());
+      fail("Falha ao ciar o repositório: " + exception.getMessage());
     }
   }
 
@@ -47,36 +50,31 @@ public class MensagemNoTerminalStepsdef {
     try (PrintStream ps = new PrintStream(new File("log"))) {
       System.setOut(ps);
       for (int i = 0; i < vezes; i++) {
-        Main.main(new String[] {});
+        Main.main(new String[]{});
       }
       this.saidas = Files.readAllLines(Paths.get("log"));
+      this.saidas.removeIf(String::isEmpty);
     } catch (final IOException exception) {
-      fail("Falha na execução: " + exception.getMessage());
+      fail("Falha ao executar a aplicação: " + exception.getMessage());
     }
 
-    if (this.saidas.size() != vezes * 4) {
+    if (this.saidas.size() != vezes) {
       fail("Faltam mensagens durante a execução.");
     }
   }
 
   @Then("^a mensagem é exibida\\.$")
-  public void a_mensagem_é_exibida(final List<Mensagem> referencias) {
-    if (referencias.size() != this.saidas.size() / 4) {
+  public void a_mensagem_é_exibida(final List<String> referencias) {
+    if (referencias.size() != this.saidas.size()) {
       fail("Incoerência na quantidade de mensagens.");
     }
 
-    final List<Mensagem> mensagens = new ArrayList<>();
-    for (int i = 0; i < this.saidas.size(); i += 4) {
-      final Mensagem mensagem = new Mensagem();
-      mensagem.setId(Long.parseLong(this.saidas.get(i)));
-      mensagem.setCategoria(this.saidas.get(i + 1));
-      mensagem.setAutor(this.saidas.get(i + 2));
-      mensagem.setTexto(this.saidas.get(i + 3));
-      mensagens.add(mensagem);
-    }
+    final List<Quote> mensagens = this.saidas.stream()
+                                             .map(Quote::of)
+                                             .collect(Collectors.toList());
 
-    for (final Mensagem mensagem : mensagens) {
-      if (!referencias.contains(mensagem)) {
+    for (final String referencia : referencias) {
+      if (mensagens.contains(Quote.of(referencia))) {
         fail("Mensagem não encontrada.");
       }
     }
