@@ -13,7 +13,7 @@ import javax.inject.Inject;
  */
 public class QuoteHandler {
 
-  private final Dao dao;
+  private final Dao<Quote> dao;
 
   /**
    * Inicializa o handler.
