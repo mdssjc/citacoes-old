@@ -1,34 +1,37 @@
 package com.github.mdssjc.citacoes.base;
 
-import com.github.mdssjc.citacoes.dao.DaoException;
-import com.github.mdssjc.citacoes.dao.QuoteDao;
+import com.github.mdssjc.citacoes.dao.Dao;
 import com.github.mdssjc.citacoes.entities.Quote;
-import lombok.extern.java.Log;
 
-import java.util.concurrent.ThreadLocalRandom;
-import java.util.logging.Level;
+import javax.inject.Inject;
 
 /**
  * Classe coordenadora de citações.
  *
  * @author Marcelo dos Santos
+ *
  */
-@Log
 public class QuoteHandler {
 
-  private QuoteDao dao;
+  private final Dao dao;
 
-  public QuoteHandler() {
-    try {
-      this.dao = new QuoteDao();
-    } catch (final DaoException e) {
-      log.log(Level.SEVERE, e.getMessage());
-    }
+  /**
+   * Inicializa o handler.
+   *
+   * @param dao
+   *     Dependência do repositório
+   */
+  @Inject
+  public QuoteHandler(final Dao dao) {
+    this.dao = dao;
   }
 
+  /**
+   * Produz uma citação aleatóriamente.
+   *
+   * @return Citação
+   */
   public Quote next() {
-    final long random = ThreadLocalRandom.current()
-                                         .nextLong(0, this.dao.total());
-    return this.dao.find(random);
+    return this.dao.getRandom();
   }
 }
