@@ -6,7 +6,7 @@ package com.github.mdssjc.citacoes.dao;
  * @author Marcelo dos Santos
  *
  */
-public class DaoException extends Exception {
+public class DaoException extends RuntimeException {
 
   private static final long serialVersionUID = 1L;
 
