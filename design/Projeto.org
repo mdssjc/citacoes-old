@@ -56,7 +56,7 @@
   - Simular um conjunto de citações {A, B, C}.
   - Invocar o ponto de entrada da aplicação.
   - Verificar as citações com o conjunto em modo aleatório.
-** Leitura em XML
-** Leitura em JSON
-** Inclusão de Mensagens
-** Sincronização do Repositório
+*** Leitura em XML
+*** Leitura em JSON
+*** Inclusão de Mensagens
+*** Sincronização do Repositório
