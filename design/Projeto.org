@@ -2,6 +2,9 @@
 #+AUTHOR: Marcelo dos Santos
 #+LANGUAGE: pt-BR
 * Introdução
+** Melhorias
+*** Transferir as mensagens de String para propriedades
+** TO DO
 * Requisitos
 ** Questões
    *What* (O quê?): o que será feito?
