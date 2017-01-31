@@ -2,6 +2,11 @@
 #+AUTHOR: Marcelo dos Santos
 #+LANGUAGE: pt-BR
 * Introdução
+  O projeto utiliza a tecnologia Java 8 com o gerenciamento de build pelo Maven, armazenado no repositório do Citações: ~github.com/mdssjc/citacoes~, execute os seguintes comandos para clonar o repositório:
+
+  No Terminal:
+    ~git clone https://github.com/mdssjc/citacoes.git~
+    ~cd citacoes~
 ** Melhorias
 *** Transferir as mensagens de String para propriedades
 ** TO DO
@@ -40,14 +45,18 @@
 ** User Stories
 *** Mensagem no Terminal
     Como um usuário da aplicação
-    Eu Quero requisitar uma nova mensagem
-    Para Que seja possível ver uma mensagem aleatoriamente no terminal com os dados de categoria, texto e autor
+    Eu Quero requisitar uma citação
+    Para Que seja possível ver uma citação aleatoriamente no terminal com os dados de categoria, texto e autor
 **** Tasks
-  - Criar a entidade Mensagem com os atributos: categoria, texto e autor.
-  - Criar um repositório de dados com o mapeamento das mensagens.
-  - Realizar a leitura da mensagem no repositório de dados aleatoriamente.
-  - Apresentar a mensagem na tela: 'Categoria: "Mensagem..." (Autor)'.
+  - Criar a entidade Citação com os atributos de: categoria, texto e autor.
+  - Criar um repositório de dados com o mapeamento das citações.
+  - Realizar a leitura da citação no repositório de dados aleatoriamente.
+  - Apresentar a citação na tela: 'Categoria: "Mensagem..." (Autor)'.
 **** Test Criteria
-  - Simular um conjunto de mensagens {A, B, C}.
+  - Simular um conjunto de citações {A, B, C}.
   - Invocar o ponto de entrada da aplicação.
-  - Verificar as mensagens com o conjunto em modo aleatório.
+  - Verificar as citações com o conjunto em modo aleatório.
+** Leitura em XML
+** Leitura em JSON
+** Inclusão de Mensagens
+** Sincronização do Repositório
