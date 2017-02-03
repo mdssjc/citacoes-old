@@ -11,28 +11,30 @@
 *** Transferir as mensagens de String para propriedades
 ** TO DO
 * Requisitos
-** Questões
-   *What* (O quê?): o que será feito?
-   R.: Um sistema multiplataforma para a visualização de mensagens com o conteúdo dos estudos;
+** Contexto
+   Contextualização do projeto:
+*** Questões
+    *What* (O quê?): o que será feito?
+    R.: Um sistema multiplataforma para a visualização de citações com o conteúdo dos estudos;
 
-   *Why* (Porquê?): por que será feito?
-   R.: Para aplicar os conhecimentos sobre *Software* e Filosofia, além de disponibilizar mensagens com valor intelectual;
+    *Why* (Porquê?): por que será feito?
+    R.: Para aplicar os conhecimentos sobre *Software* e Filosofia, além de disponibilizar citações com valor intelectual;
 
-   *Who* (Quem?): por quem será feito?
-   R.: Pelo responsável pelo projeto (MDS) com ajuda dos interessados em desenvolvimento de *software* e em aplicativos de mensagens;
+    *Who* (Quem?): por quem será feito?
+    R.: Pelo responsável pelo projeto (MDS) com ajuda dos interessados em desenvolvimento de *software* e em aplicativos de citações;
 
-   *When* (Quando?): quando será feito?
-   R.: Incrementalmente com o ciclo de vida dos estudos;
+    *When* (Quando?): quando será feito?
+    R.: Incrementalmente com o ciclo de vida dos estudos;
 
-   *Where* (Onde?): onde será feito?
-   R.: No escritório (computador, *Internet* e livros) com a exposição dos materiais através de mídias sociais: *Github* e *Twitter*;
+    *Where* (Onde?): onde será feito?
+    R.: No escritório (computador, *Internet* e livros) com a exposição dos materiais através de mídias sociais: *Github* e *Twitter*;
 
-   *How* (Como?): como será feito?
-   R.: Através dos estudos e incrementos do portfólio; e
+    *How* (Como?): como será feito?
+    R.: Através dos estudos e incrementos do portfólio; e
 
-   *How Much* (Quanto custa?): quanto vai custar?
-   R.: Por ser um projeto acadêmico, logo é irrelevante o fator material.
-** Visão
+    *How Much* (Quanto custa?): quanto vai custar?
+    R.: Por ser um projeto acadêmico, logo é irrelevante o fator material.
+** Descrição
    O projeto Citações é um *software* para visualização de mensagens do dia a dia, disponível para as principais plataformas, tais como: *Desktop*, *Mobile* e *Web* - com preferência pelo uso de tecnologias livres e acessíveis, como: *Java*, *Lisp*, *Haskell*, *C* e *GNU/Linux*.
    As mensagens são distribuídas através da sincronização do repositório central (servidor da aplicação - processo *online* ou instalação) com as armazenadas no repositório local (aplicativo - processo *offline*);
    A citação (mensagem processada) é exibida aleatoriamente na tela, conforme ação do usuário em escolher a opção de próxima mensagem, composta por: autor, categoria e sua mensagem na variedade de: provérbio, ditado popular, sabedoria, frases e etc... - um arquivo com a sumarização dos dados estatísticos sobre a visualização das citações é criado para melhorias na dinâmica de seleção no repositório.
