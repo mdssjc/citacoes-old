@@ -12,10 +12,17 @@ import com.github.mdssjc.citacoes.utils.DaggerAppComponent;
 public class Main {
 
   public static void main(final String[] args) {
-    if (args.length == 0) {
-      final AppComponent component = DaggerAppComponent.create();
-      final QuoteHandler handler = component.maker();
-      System.out.println(handler.next());
+    final String op = args.length == 0 ? "" : args[0];
+    final Operation operation = Operation.fromString(op);
+
+    switch (operation) {
+      case SINGLE:
+        final AppComponent component = DaggerAppComponent.create();
+        final QuoteHandler handler = component.maker();
+        System.out.println(handler.next());
+        break;
+      case LOOP:
+        break;
     }
   }
 }
