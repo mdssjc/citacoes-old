@@ -58,6 +58,8 @@
   - Simular um conjunto de citações {A, B, C}.
   - Invocar o ponto de entrada da aplicação.
   - Verificar as citações com o conjunto em modo aleatório.
+*** Loop de Mensagens no Terminal
+*** Loop com Filtro de Mensagens no Terminal
 *** Leitura em XML
 *** Leitura em JSON
 *** Inclusão de Mensagens
