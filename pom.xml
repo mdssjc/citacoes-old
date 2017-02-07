@@ -17,6 +17,7 @@
     </properties>
 
     <modules>
+        <module>ui</module>
         <module>base</module>
         <module>distribution</module>
     </modules>
