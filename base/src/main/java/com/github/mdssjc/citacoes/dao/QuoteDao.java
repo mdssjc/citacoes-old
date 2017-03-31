@@ -1,6 +1,7 @@
 package com.github.mdssjc.citacoes.dao;
 
 import com.github.mdssjc.citacoes.entities.Quote;
+import com.github.mdssjc.citacoes.entities.Quotes;
 import com.github.mdssjc.citacoes.utils.Config;
 
 import java.io.FileInputStream;
@@ -24,7 +25,7 @@ public class QuoteDao implements Dao<Quote> {
     try (final Scanner scanner = new Scanner(new FileInputStream(path))) {
       for (long i = 0; scanner.hasNext(); i++) {
         final String message = scanner.nextLine();
-        this.repository.put(i, Quote.of(message, i));
+        this.repository.put(i, Quotes.of(message, i));
       }
     } catch (final Exception e) {
       throw new DaoException("Falha ao inicializar o repositório.", e);

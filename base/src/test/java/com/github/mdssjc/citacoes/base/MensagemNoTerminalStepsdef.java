@@ -1,6 +1,7 @@
 package com.github.mdssjc.citacoes.base;
 
 import com.github.mdssjc.citacoes.entities.Quote;
+import com.github.mdssjc.citacoes.entities.Quotes;
 import com.github.mdssjc.citacoes.utils.Config;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
@@ -70,11 +71,11 @@ public class MensagemNoTerminalStepsdef {
     }
 
     final List<Quote> mensagens = this.saidas.stream()
-                                             .map(Quote::of)
+                                             .map(Quotes::of)
                                              .collect(Collectors.toList());
 
     for (final String referencia : referencias) {
-      if (mensagens.contains(Quote.of(referencia))) {
+      if (mensagens.contains(Quotes.of(referencia))) {
         fail("Mensagem não encontrada.");
       }
     }

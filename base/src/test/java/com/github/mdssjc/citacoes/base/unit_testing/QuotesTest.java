@@ -1,17 +1,18 @@
 package com.github.mdssjc.citacoes.base.unit_testing;
 
 import com.github.mdssjc.citacoes.entities.Quote;
+import com.github.mdssjc.citacoes.entities.Quotes;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 
 /**
- * Teste unitário para a classe Quote.
+ * Teste unitário para a classe Quotes.
  *
  * @author Marcelo dos Santos
  *
  */
-public class QuoteTest {
+public class QuotesTest {
 
   private Quote quote;
 
@@ -27,7 +28,7 @@ public class QuoteTest {
     quote.setAutor("Autor");
     final String message = "Categoria: \"Mensagem...\" (Autor)";
 
-    final Quote result = Quote.of(message);
+    final Quote result = Quotes.of(message);
 
     Assert.assertEquals(quote, result);
   }
@@ -42,7 +43,7 @@ public class QuoteTest {
     quote.setAutor("Autor");
     final String message = "Categoria: \"Mensagem...\" (Autor)";
 
-    final Quote result = Quote.of(message, id);
+    final Quote result = Quotes.of(message, id);
 
     Assert.assertEquals(quote, result);
   }
