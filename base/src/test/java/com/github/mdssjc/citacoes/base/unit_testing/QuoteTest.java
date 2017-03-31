@@ -1,7 +1,6 @@
 package com.github.mdssjc.citacoes.base.unit_testing;
 
 import com.github.mdssjc.citacoes.entities.Quote;
-import com.github.mdssjc.citacoes.utils.Config;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
@@ -14,29 +13,29 @@ import org.junit.Test;
  */
 public class QuoteTest {
 
+  private Quote quote;
+
   @Before
   public void setup() {
-    Config.INSTANCE.testMode();
+    quote = new Quote();
   }
 
   @Test
   public void constroiUmaMensagemSemId() {
-    final Quote reference = new Quote();
-    reference.setCategoria("Categoria");
-    reference.setTexto("Mensagem...");
-    reference.setAutor("Autor");
+    quote.setCategoria("Categoria");
+    quote.setTexto("Mensagem...");
+    quote.setAutor("Autor");
     final String message = "Categoria: \"Mensagem...\" (Autor)";
 
     final Quote result = Quote.of(message);
 
-    Assert.assertEquals(reference, result);
+    Assert.assertEquals(quote, result);
   }
 
   @Test
   public void constroiUmaMensagemComId() {
     long id = 10L;
 
-    final Quote quote = new Quote();
     quote.setId(id);
     quote.setCategoria("Categoria");
     quote.setTexto("Mensagem...");
