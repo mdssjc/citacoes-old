@@ -15,19 +15,19 @@ import org.junit.Test;
 public class QuotesTest {
 
   private Quote quote;
+  private String message;
 
   @Before
   public void setup() {
     quote = new Quote();
+    quote.setCategoria("Categoria");
+    quote.setTexto("Mensagem...");
+    quote.setAutor("Autor");
+    message = "Categoria: \"Mensagem...\" (Autor)";
   }
 
   @Test
   public void constroiUmaMensagemSemId() {
-    quote.setCategoria("Categoria");
-    quote.setTexto("Mensagem...");
-    quote.setAutor("Autor");
-    final String message = "Categoria: \"Mensagem...\" (Autor)";
-
     final Quote result = Quotes.of(message);
 
     Assert.assertEquals(quote, result);
@@ -36,12 +36,7 @@ public class QuotesTest {
   @Test
   public void constroiUmaMensagemComId() {
     long id = 10L;
-
     quote.setId(id);
-    quote.setCategoria("Categoria");
-    quote.setTexto("Mensagem...");
-    quote.setAutor("Autor");
-    final String message = "Categoria: \"Mensagem...\" (Autor)";
 
     final Quote result = Quotes.of(message, id);
 
