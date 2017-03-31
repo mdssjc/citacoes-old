@@ -25,9 +25,9 @@ public class Quotes {
   private static Quote of(final String message, final long id, final boolean idUsed) {
     final Pattern pattern = Pattern.compile(PATTERN);
     final Matcher matcher = pattern.matcher(message);
-    matcher.matches();
-
     final Quote quote = new Quote();
+
+    matcher.matches();
     quote.setId(idUsed ? id
                        : Long.parseLong(Optional.ofNullable(matcher.group(1))
                                                 .orElse("0")));
