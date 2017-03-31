@@ -3,9 +3,9 @@ package com.github.mdssjc.citacoes.entities;
 import lombok.Data;
 
 /**
- * Classe da entidade Quote.
+ * Classe da entidade Quote (Citação).
  * <p/>
- * Representa os elementos da citação: id, categoria, texto e autor
+ * Representa os elementos de uma citação: id, categoria, texto e autor
  *
  * @author Marcelo dos Santos
  *
