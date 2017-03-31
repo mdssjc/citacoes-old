@@ -12,6 +12,8 @@ import java.util.regex.Pattern;
  */
 public class Quotes {
 
+  private static final String PATTERN = "([0-9])*\\.?(.*): \"(.*)\" \\((.*)\\)";
+
   public static Quote of(final String message) {
     return of(message, 0, false);
   }
@@ -21,7 +23,7 @@ public class Quotes {
   }
 
   private static Quote of(final String message, final long id, final boolean idUsed) {
-    final Pattern pattern = Pattern.compile("([0-9])*\\.?(.*): \"(.*)\" \\((.*)\\)");
+    final Pattern pattern = Pattern.compile(PATTERN);
     final Matcher matcher = pattern.matcher(message);
     matcher.matches();
 
