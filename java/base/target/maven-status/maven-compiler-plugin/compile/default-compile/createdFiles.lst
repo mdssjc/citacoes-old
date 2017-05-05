@@ -1,0 +1,14 @@
+com/github/mdssjc/citacoes/dao/Dao.class
+com/github/mdssjc/citacoes/base/QuoteHandler_Factory.class
+com/github/mdssjc/citacoes/base/QuoteHandler.class
+com/github/mdssjc/citacoes/utils/AppModule_ProvideDaoFactory.class
+com/github/mdssjc/citacoes/utils/AppModule.class
+com/github/mdssjc/citacoes/dao/DaoException.class
+com/github/mdssjc/citacoes/utils/Config.class
+com/github/mdssjc/citacoes/dao/QuoteDao.class
+com/github/mdssjc/citacoes/utils/DaggerAppComponent$1.class
+com/github/mdssjc/citacoes/utils/DaggerAppComponent.class
+com/github/mdssjc/citacoes/base/Main.class
+com/github/mdssjc/citacoes/utils/AppComponent.class
+com/github/mdssjc/citacoes/utils/DaggerAppComponent$Builder.class
+com/github/mdssjc/citacoes/entities/Quote.class
