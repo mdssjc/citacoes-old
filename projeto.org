@@ -2,14 +2,15 @@
 #+AUTHOR: Marcelo dos Santos
 #+LANGUAGE: pt-BR
 * Introdução
-  O projeto utiliza a tecnologia Java 8 com o gerenciamento de build pelo Maven, armazenado no repositório do Citações: ~github.com/mdssjc/citacoes~, execute os seguintes comandos para clonar o repositório:
-
-  No Terminal:
+  O projeto *Citações* é um software desenvolvido em /Racket/ e /Java/ para a visualização de variadas formas de citações.
+  Na tecnologia /Racket/, utiliza-se o /Raco/ como executor de /build/.
+  Na tecnologia /Java/, utiliza-se o /Maven/ como gerenciador de /build/.
+  O projeto está armazenado no repositório do Citações: ~github.com/mdssjc/citacoes~, execute os seguintes comandos para clonar o repositório, no Terminal digite:
     ~git clone https://github.com/mdssjc/citacoes.git~
     ~cd citacoes~
 ** Melhorias
+*** DOING Retrabalhar para a tecnologia Racket
 *** Transferir as mensagens de String para propriedades
-** TO DO
 * Requisitos
 ** Contexto
    Contextualização do projeto:
@@ -47,12 +48,17 @@
 ** User Stories
 *** Mensagem no Terminal
     Como um usuário da aplicação
-    Eu Quero requisitar uma citação
-    Para Que seja possível ver uma citação aleatoriamente no terminal com os dados de categoria, texto e autor
+    Eu Quero visualizar uma citação no terminal
+    Para Que seja possível ver uma citação aleatoriamente no terminal com a apresentação dos dados de categoria, texto e autor
+**** Days
+     0.5 dia ou 1 dia quando selecionado para a interação 0
+**** Priority
+     10 de importância
 **** Tasks
   - Criar a entidade Citação com os atributos de: categoria, texto e autor.
   - Criar um repositório de dados com o mapeamento das citações.
   - Realizar a leitura da citação no repositório de dados aleatoriamente.
+  - Definir o ponto de entrada do ambiente da aplicação (main).
   - Apresentar a citação na tela: 'Categoria: "Mensagem..." (Autor)'.
 **** Test Criteria
   - Simular um conjunto de citações {A, B, C}.
