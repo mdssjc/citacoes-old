@@ -5,6 +5,14 @@
 *.iml
 # ---
 
+### Gradle ###
+.gradle
+/gradle
+/build/
+/gradlew
+/gradlew.bat
+# ---
+
 ### Maven ###
 target/
 # ---
