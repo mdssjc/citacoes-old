@@ -1,23 +1,15 @@
-# Citações #
+# Citações
 
-O projeto Citações é um *software* para visualização de mensagens do dia a dia (provérbio, ditado popular, sabedoria, frases e etc...), disponível nas principais plataformas, tais como: *Desktop*, *Mobile* e *Web* - na preferência pelo uso de tecnologias livres e acessíveis, como: *Java*, *Lisp*, *C* e *Linux*.
+O projeto Citações é um *software* para visualização de mensagens do dia a dia (provérbio, ditado popular, sabedoria, frases e etc...).
 
-![Tela do Citações](design/tela0.png)
+## Projeto
 
-## Projeto ##
-
-O projeto utiliza a tecnologia *Java* 8 com o gerenciamento de *build* pelo *Maven*, execute os seguintes comandos para clonar o repositório:
+O projeto utiliza a tecnologia *Java* 8 com o gerenciamento de *build* pelo *Gradle*, execute os seguintes comandos para clonar o repositório:
 
     git clone https://github.com/mdssjc/citacoes.git
     cd citacoes
 
-[Requisitos](design/Requisitos.md) | [Arquitetura](design/Arquitetura.md)
-
-### Estrutura de Diretórios ###
-
-  * base: camada principal do sistema.
-
-## Licença ##
+## Licença
 
 CC0 1.0 Universal
 
