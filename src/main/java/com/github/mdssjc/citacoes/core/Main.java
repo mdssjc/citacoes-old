@@ -6,6 +6,7 @@ import com.github.mdssjc.citacoes.core.presenter.Presenter;
 import com.github.mdssjc.citacoes.core.presenter.QuotePresenter;
 import com.github.mdssjc.citacoes.core.use_cases.Command;
 import com.github.mdssjc.citacoes.core.use_cases.NextCommand;
+import com.github.mdssjc.citacoes.core.utils.DbUtils;
 
 /**
  * Exemplo de aplicação.
@@ -22,5 +23,8 @@ public class Main {
     controller.operation(next);
 
     System.out.println(presenter.message());
+
+    DbUtils.create("quotes.db");
+    DbUtils.connect();
   }
 }
