@@ -18,6 +18,7 @@ dependencies {
     testCompile 'info.cukes:cucumber-java:1.2.5'
 
     compile 'org.xerial:sqlite-jdbc:3.21.0.1'
+    compile 'commons-dbutils:commons-dbutils:1.7'
 
     compileOnly 'org.projectlombok:lombok:1.16.18'
     compileOnly 'com.google.dagger:dagger-compiler:2.8'
