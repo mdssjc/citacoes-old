@@ -1,31 +1,9 @@
 *.gz
 
-### IntelliJ IDEA ###
-.idea/
-*.iml
-# ---
-
-### Gradle ###
-.gradle
-/gradle
-/build/
-/gradlew
-/gradlew.bat
-# ---
-
-### Maven ###
-target/
-# ---
-
-### Java ###
-*.class
-# ---
-
 ### Racket ###
 *.rkt~
 *~
 *.bak
-# ---
 
 ### Others ###
 *.log
