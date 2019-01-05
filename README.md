@@ -1,23 +1,13 @@
 # Citações
 
-O projeto Citações é um _software_ para visualização de mensagens do dia a dia
+O projeto **Citações** é um _software_ para visualização de mensagens do dia a dia
 (provérbio, ditado popular, sabedoria, frases e etc...).
-
-O objetivo do projeto é ser a parte prática do Sistema MDS.
 
 _Status_ do projeto: _Alpha_.
 
-Tecnologias utilizadas: _Java_ com _Gradle_ e _Racket_.
-
-## Roadmap
-
-Em edição...
-
-[ ] - _core_ do _software_ em _Java_.
-
 ## Projeto
 
-Para utilizar o projeto, execute os seguintes comandos para clonar o
+Para reproduzir o projeto, execute os seguintes comandos para clonar o
 repositório:
 
     git clone https://github.com/mdssjc/citacoes.git
