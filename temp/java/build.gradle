@@ -24,6 +24,8 @@ dependencies {
     compileOnly 'com.google.dagger:dagger-compiler:2.8'
     compile 'com.google.dagger:dagger:2.8'
 
+    compile 'org.clojure:clojure:1.9.0'
+
     testCompile("org.junit.jupiter:junit-jupiter-api:$junitVersion")
     testRuntime("org.junit.jupiter:junit-jupiter-engine:$junitVersion")
 }
